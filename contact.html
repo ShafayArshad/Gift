@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LovenestGifts | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <a href="https://wa.me/923001234567" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/538bfa2b-8bfb-4aa8-9913-5cabca32627c.jpg?auth_key=1875066964-2edb584abce64b1c8f2eaa65297edaf1-0-9b4c0ef750db7e2a702d23c8ef193c7c" alt="LovenestGifts Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="customization.html">Customize</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="contact" class="contact section-padding" style="padding-top: 100px;">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div><h4>Phone / WhatsApp</h4><p>+92 3350376959</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div><h4>Email</h4><p>hello@lovenestgifts.com</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h4>Location</h4><p>karachi, Pakistan</p></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-box">
+                    <form id="contactForm" onsubmit="handleContact(event)">
+                        <div class="form-group" style="margin-bottom: 15px;"><label>Your Name</label><input type="text" placeholder="Enter your name" required></div>
+                        <div class="form-group" style="margin-bottom: 15px;"><label>Your Phone</label><input type="tel" placeholder="Enter your phone number" required></div>
+                        <div class="form-group" style="margin-bottom: 20px;"><label>Message</label><textarea rows="4" placeholder="How can we help you?" required></textarea></div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LovenestGifts</div>
+            <p class="footer-text">&copy; 2025 LovenestGifts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+
+        function handleContact(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Message Sent!";
+            btn.style.backgroundColor = "#25D366";
+            setTimeout(() => { e.target.reset(); btn.innerText = originalText; btn.style.backgroundColor = ""; }, 3000);
+        }
+    </script>
+</body>
+</html>

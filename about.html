@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LovenestGifts | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <a href="https://wa.me/923001234567" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/538bfa2b-8bfb-4aa8-9913-5cabca32627c.jpg?auth_key=1875066964-2edb584abce64b1c8f2eaa65297edaf1-0-9b4c0ef750db7e2a702d23c8ef193c7c" alt="LovenestGifts Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="customization.html">Customize</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="about section-padding" style="padding-top: 100px;">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p><strong>LovenestGifts</strong> creates beautiful customized gift baskets and boxes to make every moment special. We believe that a gift is not just an item, but an emotion wrapped with love.</p>
+                    <p>Every product is made with love and care, ensuring that your feelings are perfectly conveyed through premium presentation and high-quality assortments. Whether it's a birthday, anniversary, or just a gesture of love, we are here to help you celebrate.</p>
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=2012&auto=format&fit=crop" alt="About LovenestGifts">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Happy Hearts</h2>
+                <p class="section-subtitle">What our customers say</p>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">"The premium box I ordered for my wife was stunning. The packaging was so elegant and the products inside were top quality."</p>
+                    <p class="customer-name">- Ahmed Khan</p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">"LovenestGifts made my best friend's birthday unforgettable. The custom message card added such a personal touch."</p>
+                    <p class="customer-name">- Sarah Ali</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LovenestGifts</div>
+            <p class="footer-text">&copy; 2023 LovenestGifts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LovenestGifts | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/923001234567" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/538bfa2b-8bfb-4aa8-9913-5cabca32627c.jpg?auth_key=1875066964-2edb584abce64b1c8f2eaa65297edaf1-0-9b4c0ef750db7e2a702d23c8ef193c7c" alt="LovenestGifts Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="customization.html">Customize</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Make Every Gift Special 💝</h1>
+            <p>Customized gift baskets & boxes made with love for your loved ones. Turn ordinary moments into precious memories.</p>
+            <div class="hero-buttons">
+                <a href="product.html" class="btn btn-primary">Shop Now</a>
+                <a href="customization.html" class="btn btn-outline">Customize Gift</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LovenestGifts</div>
+            <p class="footer-text">&copy; 2023 LovenestGifts. All rights reserved. Made with 💝</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+    </script>
+</body>
+</html>

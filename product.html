@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LovenestGifts | Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <a href="https://wa.me/923001234567" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/538bfa2b-8bfb-4aa8-9913-5cabca32627c.jpg?auth_key=1875066964-2edb584abce64b1c8f2eaa65297edaf1-0-9b4c0ef750db7e2a702d23c8ef193c7c" alt="LovenestGifts Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="customization.html">Customize</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="products" class="products section-padding" style="padding-top: 100px;">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Our Collection</h2>
+                <p class="section-subtitle">Handpicked assortments for Him & Her</p>
+                <div class="product-filters">
+                    <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                    <button class="filter-btn" onclick="filterProducts('women')">For Women</button>
+                    <button class="filter-btn" onclick="filterProducts('men')">For Men</button>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Women Products -->
+                <div class="product-card show" data-category="women">
+                    <div class="product-img"><img src="2500 women.jpeg" alt="Basket for Women"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Classic Basket for Women</h3>
+                        <span class="product-price">Rs. 2500</span>
+                        <p class="product-desc">Skincare, chocolates & roses beautifully arranged.</p>
+                        <a href="#" onclick="orderProduct('Classic Basket for Women', 2500)" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                    </div>
+                </div>
+                <div class="product-card show" data-category="women">
+                    <div class="product-img"><img src="2500.jpeg" alt="Box for Women"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Signature Box for Women</h3>
+                        <span class="product-price">Rs. 2500</span>
+                        <p class="product-desc">Elegant box containing perfumes, dried flowers & treats.</p>
+                        <a href="#" onclick="orderProduct('Signature Box for Women', 2500)" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                    </div>
+                </div>
+                <div class="product-card show" data-category="women">
+                    <div class="product-img"><img src="2800 women 2.jpeg" alt="Box for Women Premium"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Luxury Premium baskets</h3>
+                        <span class="product-price">Rs. 2800</span>
+                        <p class="product-desc">High-end cosmetics, jewelry & premium chocolates.</p>
+                        <a href="#" onclick="orderProduct('Luxury Premium Box', 2800)" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                    </div>
+                </div>
+                <!-- Men Products -->
+                <div class="product-card show" data-category="men">
+                    <div class="product-img"><img src="3500.jpeg" alt="Basket for Men"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gentleman's Basket</h3>
+                        <span class="product-price">Rs. 2800</span>
+                        <p class="product-desc">Grooming essentials, snacks & accessories.</p>
+                        <a href="#" onclick="orderProduct('Gentlemans Basket', 2800)" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                    </div>
+                </div>
+                <div class="product-card show" data-category="men">
+                    <div class="product-img"><img src="5500.jpeg" alt="Box for Men"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Executive Box for Men</h3>
+                        <span class="product-price">Rs. 5500</span>
+                        <p class="product-desc">Watches, wallets, premium dry fruits & perfumes.</p>
+                        <a href="#" onclick="orderProduct('Executive Box for Men', 5500)" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                    </div>
+                </div>
+                <div class="product-card show" data-category="men">
+                    <div class="product-img"><img src="7500.jpeg" alt="Box for Men Premium"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Royal Premium Box</h3>
+                        <span class="product-price">Rs. 7500</span>
+                        <p class="product-desc">The ultimate luxury gift set with imported items.</p>
+                        <a href="#" onclick="orderProduct('Royal Premium Box', 7500)" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LovenestGifts</div>
+            <p class="footer-text">&copy; 2025 LovenestGifts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+        
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.classList.add('show');
+                } else {
+                    card.classList.remove('show');
+                }
+            });
+        }
+        function orderProduct(name, price) {
+            const text = `Hello LovenestGifts! I want to order the *${name}* for Rs. ${price}.`;
+            window.open(`https://wa.me/923001234567?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>

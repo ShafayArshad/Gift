@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LovenestGifts | Customize</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <a href="https://wa.me/923001234567" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/538bfa2b-8bfb-4aa8-9913-5cabca32627c.jpg?auth_key=1875066964-2edb584abce64b1c8f2eaa65297edaf1-0-9b4c0ef750db7e2a702d23c8ef193c7c" alt="LovenestGifts Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+             <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="customization.html">Customize</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="customize" class="customization section-padding" style="padding-top: 100px;">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Design Your Own Gift 🎁</h2>
+                <p class="section-subtitle">Create something unique and personal</p>
+            </div>
+            <div class="custom-container">
+                <form id="customOrderForm" class="custom-form" onsubmit="submitCustomOrder(event)">
+                    <div class="form-group">
+                        <label for="giftType">Choose Base</label>
+                        <select id="giftType" required>
+                            <option value="">Select Option</option>
+                            <option value="Basket">Gift Basket</option>
+                            <option value="Box">Gift Box</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget">
+                            <option value="2000-3000">Rs. 2000 - 3000</option>
+                            <option value="3000-5000">Rs. 3000 - 5000</option>
+                            <option value="5000+">Rs. 5000+</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="items">Select Items (e.g., Perfumes, Chocolates, Roses)</label>
+                        <textarea id="items" rows="3" placeholder="List the items..." required></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Custom Message on Card</label>
+                        <textarea id="message" rows="2" placeholder="Write your heartfelt message..." required></textarea>
+                    </div>
+                    <div class="form-group full-width text-center">
+                        <button type="submit" class="btn btn-primary">Start Custom Order via WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LovenestGifts</div>
+            <p class="footer-text">&copy; 2025 LovenestGifts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+
+        function submitCustomOrder(e) {
+            e.preventDefault();
+            const type = document.getElementById('giftType').value;
+            const budget = document.getElementById('budget').value;
+            const items = document.getElementById('items').value;
+            const message = document.getElementById('message').value;
+            const text = `Hi! I want to customize a gift.%0A%0A*Type:* ${type}%0A*Budget:* ${budget}%0A*Items:* ${items}%0A*Message:* ${message}`;
+            window.open(`https://wa.me/923001234567?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
